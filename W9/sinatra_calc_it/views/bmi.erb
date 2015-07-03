@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  <h1>Calculate your body mass index</h1>
+  
+  <form action="/bmi">
+    <label>Enter your height:</label>
+    <input type="text" name="height"><br>
+    <label>Enter your weight:</label>
+    <input type="text" name="weight">
+    <input type="submit">
+  </form>
+
+  <p>Your height: <%= params[:height] %></p>
+  <p>Your weight: <%= params[:weight] %></p>
+
+  <h2>BMI: <%= @bmi %></h2>
+
+</body>
+</html>

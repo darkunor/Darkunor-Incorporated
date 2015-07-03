@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+<% @countries.each do |country| %>
+<%= country.name %> has <%= pluralize(country.language, 'language')%>
+
+<%= link_to 'show', country %>
+<%= link_to 'edit', edit_country_path(country) %>
+<%= button_to 'delete', country_path(country), method: :delete, confirm: 'Nuke that country?' %>
+
+<br>
+<% end %>
+=======
+
+
+<%=render @countries %>
+>>>>>>> b8e428f8059ccb5792d7f21390b8721512f63771

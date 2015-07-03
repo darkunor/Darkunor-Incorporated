@@ -1,0 +1,33 @@
+
+<h1>
+***MTA***
+</h1>
+<p>
+  What train do you want to get off?
+</p>
+
+<form action='/home' method='get'>
+
+  start train:
+  <input type= 'text' name='start train'>
+  <br>
+  
+  start stop:
+  <input type= 'text' name='start stop'>
+  <br>
+  
+  stop train:
+  <input type= 'text' name='stop train'> 
+  <br>
+  
+  stop stop:
+  <input type= 'text' name='stop stop'>
+  <br>
+
+  <button>go!></button>
+</form>
+
+
+<h2>
+Your trip length is <%= @total_length_of_trip%> stops.
+</h2>

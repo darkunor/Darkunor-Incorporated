@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CountryApp</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h1>Country App</h1>
+<nav>
+<ul>
+<<<<<<< HEAD
+=======
+<li><%= link_to 'Continents', continents_path %></li>
+>>>>>>> b8e428f8059ccb5792d7f21390b8721512f63771
+<li><%= link_to 'Countries', countries_path %></li>
+<li><%= link_to 'New country',new_country_path %></li>
+</ul>
+</nav>
+
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  flag: MyString
+  map: MyString
+  video: MyString
+  population: 1
+  summary: MyText
+
+two:
+  name: MyString
+  flag: MyString
+  map: MyString
+  video: MyString
+  population: 1
+  summary: MyText

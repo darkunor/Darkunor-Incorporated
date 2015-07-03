@@ -1,0 +1,17 @@
+<h1>Calculate your monthly mortgage payments!</h1>
+
+  <form action="/morg">
+    <label>Enter your principal</label>
+    <input type="text" name="principal">
+    <label>The yearly interest on this principal</label>
+    <input type="text" name="interest">
+    <label>Enter the number of payments you've made</label>
+    <input type="text" name="payments">
+  <input type="submit">
+  </form>
+
+  <p>Your principal: <%= params[:principal] %></p>
+  <p>Your interest: <%= params[:interest] %></p>
+  <p>Your payments: <%= params[:payments] %></p>
+
+  <h2>MORG: <%= @morg %></h2>

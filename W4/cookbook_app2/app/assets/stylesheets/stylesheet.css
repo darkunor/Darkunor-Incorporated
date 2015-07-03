@@ -1,0 +1,63 @@
+body {
+background-color: orange;
+background-size: cover;
+font-style: italic;
+font-family: 'Indie Flower', cursive;
+margin: 0 auto;
+padding: 50px 100px;
+}
+
+#bowl_of_fruit {
+  float: right;
+   width: 600px
+  
+}
+
+h1 {
+  text-align: left;
+font-size: 40px;
+}
+
+#alert{
+  text-align: left;
+}
+
+td {
+border: 1px solid black;
+
+}
+.category_name{
+  border:none;
+  color: green;
+  font-size: 25px;
+}
+
+a.category{
+  color: blue;
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
+}
+
+a.me{
+  color: blue;
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
+}
+
+a.jo{
+  color:blue;
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
+}
+
+a.l{
+ color:blue;
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px; 
+}
+
+a.m{
+ color:blue;
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px; 
+}

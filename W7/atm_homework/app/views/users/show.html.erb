@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p><%= @user.name %></p>
+
+<div class="account current">
+  <h2>Current Account</h2>
+  <p>Current balance: <span class="balance"><%= @user.current_balance %></span></p>
+  <input type="text" class="current"/>
+  <button class="deposit">deposit</button>
+  <button class="withdraw">withdraw</button>
+</div>
+
+<div class="account savings">
+  <h2>Savings Account</h2>
+  <p>Savings balance: <span class="balance"><%= @user.savings_balance %></span></p>
+  <input type="text" class="savings"/>
+  <button class="deposit">deposit</button>
+  <button class="withdraw">withdraw</button>
+</div>
+
+
+<%= link_to 'Back', users_path %>

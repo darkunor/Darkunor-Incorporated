@@ -1,0 +1,35 @@
+<dl>
+  <dt>
+    <label for='ingredient_name'>Name:</label>
+  </dt>
+  <dd>
+    <input id='ingredient_name' type='text' name='ingredient[name]' value='<%=@ingredient.name %>' autofocus>
+  </dd>
+
+  <dt>
+    <label for='ingredient_description'>Description:</label>
+  </dt>
+  <dd>
+    <textarea id='ingredient_description' name='ingredient[description]'><%=@ingredient.description %></textarea>
+  </dd>
+
+  <dt>
+    <label for='ingredient_recipe_id'>recipe:</label>
+  </dt>
+  <dd>
+    
+ 
+  <select id= 'ingredient_recipe_id' name= 'ingredient[recipe_id]'>
+<% @recipe.each do |recipe| %>
+<option value= '<%=recipe.id %>'
+<% if @ingredient.recipe_id == recipe.id %>
+selected= 'selected'
+<% end %>
+>
+<%= recipe.name %>
+</option>
+<% end %>
+</select>
+  </dd>
+
+</dl>

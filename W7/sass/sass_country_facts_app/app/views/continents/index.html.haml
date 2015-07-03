@@ -1,0 +1,15 @@
+- @continents.each do |continent|
+  - continent.countries.each do |country|
+    .country
+      - if country.video == '' || country.video == nil
+        .poster
+          %img{:src => country.flag}/
+      - else
+        = video_tag country.video,  controls: false, muted: true, type: 'video/webm'
+      .summary
+        %p
+          %img.map{:src => country.map}
+            %h2= country.name
+            = country.summary
+            %span.population
+              The current population of #{country.name} is #{number_to_human(country.population)}.

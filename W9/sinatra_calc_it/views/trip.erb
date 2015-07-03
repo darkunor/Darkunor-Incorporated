@@ -1,0 +1,22 @@
+<h1>Calculate how far your trip is and how much it costs!</h1>
+<form action="/trip">
+
+  <label>Enter price of your trip:</label>
+  <input type="text" name="price">
+  <label>Enter the distance of your trip:</label>
+  <input type="text" name="distance">
+  <label>Enter the miles per gallon:</label>
+  <input type="text" name="mpg">
+  <label>How fast are you driving!:</label>
+  <input type="text" name="speed">
+  <input type="submit">
+
+  <p>Your price: <%= params[:price] %></p>
+  <p>Your distance: <%= params[:distance] %></p>
+  <p>Your mpg: <%= params[:mpg] %></p>
+  <p>Your speed: <%= params[:speed] %></p>
+
+
+</form>
+
+<h2>TRIP: <%= @trip %></h2>

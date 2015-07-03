@@ -1,0 +1,24 @@
+<%= form_for @country do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :population %>
+    <%= f.text_field :population %>
+    <br>
+    <%= f.label :language %>
+    <%= f.text_field :language %>
+    <br>
+<<<<<<< HEAD
+=======
+    <%= f.label :continent_id %>
+    <%= f.collection_select :continent_id, Continent.all, :id, :name %>
+    <br>
+>>>>>>> b8e428f8059ccb5792d7f21390b8721512f63771
+    <%= f.label :currency %>
+    <%= f.text_field :currency %>
+    <br>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+    <br>
+    <%= f.submit 'Input country!' %>
+  <% end %>

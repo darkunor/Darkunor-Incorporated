@@ -1,0 +1,30 @@
+<form method='get' action='/stocks'>
+  ticker name: <input type='text' name='ticker'><br>
+  <button>Submit!</button>
+</form>
+
+<% if @result %> 
+
+Symbol: <%= @result.symbol %> <br>
+
+Name = <%= @result.name %> <br>
+Last Trade = <%= @result.lastTrade %> <br>
+Date = <%= @result.date %> <br>
+Time = <%= @result.time %> <br>
+Change = <%= @result.change %> <br>
+Change Points = <%= @result.changePoints %> <br>
+Change Percent = <%= @result.changePercent %> <br>
+Previous Close = <%= @result.previousClose %> <br>
+Open = <%= @result.open %> <br>
+Day High = <%= @result.dayHigh %> <br>
+Day Low = <%= @result.dayLow %> <br>
+Volume = <%= @result.volume %> <br>
+Day Range = <%= @result.dayRange %> <br>
+Last Trade With Time = <%= @result.lastTradeWithTime %> <br>
+Ticker Trend = <%= @result.tickerTrend %> <br>
+Average Daily Volume = <%= @result.averageDailyVolume %> <br>
+Bid = <%= @result.bid %> <br>
+Ask = <%= @result.ask %> <br>
+
+<% end %>
+

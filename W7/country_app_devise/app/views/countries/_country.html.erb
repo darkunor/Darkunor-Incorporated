@@ -1,0 +1,7 @@
+<%= country.name %> has <%= pluralize(country.language, 'language')%>
+<%= country.continent.try :name %>                    
+<%= link_to 'show', country %>
+<%= link_to 'edit', edit_country_path(country) %>
+<%= button_to 'delete', country_path(country), method: :delete, confirm: 'Nuke that country?' %>
+
+<br>

@@ -1,0 +1,24 @@
+= form_for(@country) do |c|
+  .field
+    = c.label :name
+    = c.text_field :name
+  .field
+    = c.label :name
+    = c.collection_select :continent_id, Continent.all, :id, :name
+  .field
+    = c.label :flag
+    = c.text_field :flag
+  .field
+    = c.label :map
+    = c.text_field :map
+  .field
+    = c.label :video
+    = c.text_field :video
+  .field
+    = c.label :population
+    = c.text_field :population
+  .field
+    = c.label :summary
+    = c.text_field :summary
+  .actions
+    = c.submit

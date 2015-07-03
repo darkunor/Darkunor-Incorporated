@@ -1,0 +1,42 @@
+<h1>Movie Listing !</h1>
+
+<!-- <table>
+  <tr>
+    <th>Name</th>
+    <th>Actors</th>
+    <th>Genre</th>
+    <th>Review</th>
+    <th>Placedwatched</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ -->
+ <ol>
+<% @movies.each do |movie| %>
+    <li>
+    <h2><%= movie.name %></h2>
+    <br>
+    <%= movie.actors %>
+    <br>
+    <%= movie.genre_id %>
+    <br>
+    <%= movie.review %>
+    <br>
+    <%= movie.placedwatched %>
+    <br>
+    <%= link_to 'Show', movie %>
+    <br>
+    <%= link_to 'Edit', edit_movie_path(movie) %>
+    <br>
+    <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <br>
+    </li>
+<% end %>
+ </ol>
+
+<!-- </table> -->
+
+<br />
+
+<%= link_to 'New Movie', new_movie_path %>

@@ -1,0 +1,109 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+
+ */
+
+ //colors
+ $color_bright_gray_approx: #3e454c;
+ $white: white;
+ $black: #000;
+ $white_85: rgba(255,255,255,.85);
+ $color_blue_approx: #0000ff;
+ $gray: gray;
+
+ //fonts
+ $font_0: Josefin Slab;
+ $font_1: serif;
+
+ body {
+  background-color: #3E454C;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAADklEQVQIW2NgQAXGZHAAGioAza6+Hk0AAAAASUVORK5CYII=);
+  font-family: $font_0, $font_1;
+ }
+ #wrapper {
+  max-width: 700px;
+  min-width: 500px;
+  margin: 0 auto;
+  background-color: $white;
+  height: 1000px;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 10px $black;
+ }
+ form {
+  display: inline-block;
+  margin: 0 auto;
+  padding-left: 50px;
+ }
+ input {
+  padding: .5em 0;
+  margin: 1em 0;
+  [type='submit'] {
+    padding: 1em;
+  }
+ }
+ .country {
+  width: 100%;
+  background-color: $white;
+ }
+ h2 {
+  &.summary {
+    text-decoration: underline;
+  }
+  &.continent a {
+    color: $black;
+  }
+ }
+ .summary {
+  line-height: 1.5em;
+  font-size: 2em;
+  padding: 2em;
+  height: 600px;
+  min-height: 100%;
+ }
+ .population {
+  padding-top: 1em;
+  display: block;
+  font-weight: 700;
+ }
+ button {
+  padding: 2em;
+ }
+ a {
+  color: $white_85;
+  &:visited {
+    color: $white_85;
+  }
+  &:active {
+    color: #0000FF;
+  }
+ }
+ nav {
+  background-color: $gray;
+ }
+ video#bgvid {
+  width: 100%;
+  left: 0;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+ }
+ .poster img {
+  width: 100%;
+  height: 100%;
+ }
+ img.map {
+  vertical-align: top;
+  padding: .5em;
+  text-align: right;
+  width: 60%;
+  float: right;
+ }

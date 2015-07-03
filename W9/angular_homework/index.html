@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular Intro</title>
+  <script type="text/javascript" src='/js/angular.js'></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-animate.js"></script>
+  <script type="text/javascript" src='/js/app.js'></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body ng-app='studentYearBookApp'>
+
+  <div class="container">
+
+    <h1>W.D.I Student YearBook</h1>
+
+    <p>W.D.I is a fantastic school that offers a variety of web development courses in both frontend and backend.</p>
+
+    <img src="/images/grouppic.png">
+
+    <div ng-controller="YearBookController">
+
+      <div class="row">
+        <div class="col-md-4">
+          <nav>
+            <h2>Students</h2>
+
+            <input placeholder='search' ng-model='search' />
+
+            <ul>
+              <li ng-class='{highlighted: student === selectedStudent}' ng-repeat="student in students | filter: {name: search} | orderBy: 'name'" ng-click="selectStudent(student)">
+                {{ student.name }}
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col-md-8">
+          <section id='selected-student-details'>
+            <div class='close' ng-click='clearSelectedStudent()'>X</div>
+            <h2>Selected Student Details</h2>
+              <table class="table" ng-show="selectedStudent">
+              <tr>
+                <td>Name:</td>
+                <td>{{ selectedStudent.name }} </td>
+              </tr>
+              <tr>
+                <td>Bio:</td>
+                <td>{{ selectedStudent.bio }} </td>
+              </tr>
+              <tr>
+                <td>Town:</td>
+                <td>{{ selectedStudent.town }} </td>
+              </tr>
+            <tr>
+              <td>Photo:</td>
+              <td><img ng-src="{{ selectedStudent.photo }}"></td>
+            </tr>
+            <tr>
+              <td>Phone:</td>
+              <td>{{ selectedStudent.contact.phone }} </td>
+            </tr>
+            <tr>
+              <td>Email:</td>
+              <td>{{ selectedStudent.contact.email }} </td>
+            </tr>
+            </table>
+          </section>
+        </div>
+      </div>
+
+  <!--   <button ng-click='addToBasket()'>Click to add to basket</button>
+
+    <p>Your basket has {{ basket }} items in it</p>
+  -->
+</div>
+
+
+

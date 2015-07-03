@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  actors: MyText
+  genre_id: 1
+  review: MyText
+  placedwatched: MyString
+
+two:
+  name: MyString
+  actors: MyText
+  genre_id: 1
+  review: MyText
+  placedwatched: MyString

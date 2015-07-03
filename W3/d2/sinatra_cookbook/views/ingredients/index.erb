@@ -1,0 +1,12 @@
+<ul>
+  <% @ingredients.each do |ingredient| %>
+    <li>
+      <%= ingredient.name %>
+      <%= ingredient.category.name %>
+      <a href="/ingredients/<%= ingredient.id %>/edit">edit</a>
+    </li>
+  <% end %>
+
+  <li><a href="/ingredients/new">new ingredient</a></li>
+
+</ul>

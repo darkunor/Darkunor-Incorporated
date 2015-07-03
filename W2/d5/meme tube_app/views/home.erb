@@ -1,0 +1,10 @@
+<ul>
+  <% @videos.each do |video| %>
+    <li>
+      <h2>
+        <%= video['title'] %>
+      </h2>
+      <a href="/videos/<%= video['id']%>">show this video</a>
+    </li>
+  <% end %>
+</ul>
